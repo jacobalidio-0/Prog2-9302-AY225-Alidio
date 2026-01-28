@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Login System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Attendance Login System</h1>
+        
+        <!-- Alert message area -->
+        <div id="alertMessage" class="alert"></div>
+        
+        <!-- Login form -->
+        <form id="loginForm" class="login-form">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required placeholder="Enter your username">
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required placeholder="Enter your password">
+            </div>
+            
+            <button type="submit">Log In</button>
+        </form>
+        
+        <!-- Attendance summary (hidden by default) -->
+        <div id="attendanceSummary" class="attendance-summary">
+            <h2>Attendance Recorded</h2>
+            <div class="attendance-info">
+                <strong>Username:</strong> <span id="displayUsername"></span>
+            </div>
+            <div class="attendance-info">
+                <strong>Course/Year:</strong> <span id="displayCourse"></span>
+            </div>
+            <div class="attendance-info">
+                <strong>Login Timestamp:</strong> <span id="displayTimestamp"></span>
+            </div>
+            <div class="attendance-info">
+                <strong>E-Signature:</strong> <span id="displaySignature"></span>
+            </div>
+            <button id="downloadBtn" class="download-btn">Download Attendance Summary</button>
+        </div>
+    </div>
+
+    <!-- Embedded beep sounds -->
+    <audio id="errorBeep" preload="auto">
+        <source src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBSuBzvLZiTYHGWi77eafTRAMUKfj8LZjHAU7k9r0yHkpBSh+zPLaizsKF2S56+mrVhMMTKXh8bllHgU2jdXzzn4tBSuBzvLZiTYHGWi77eafTRAMUKfj8LZjHAU7k9r0yHkpBSh+zPLaizsKF2S56+mrVhMMTKXh8bllHgU2jdXzzn4tBSuBzvLZiTYHGWi77eafTRAMUKfj8LZjHAU7k9r0yHkpBSh+zPLaizsKF2S56+mrVhMMTKXh8bllHgU2jdXzzn4tBSuBzvLZiTYHGWi77eafTRAMUKfj8LZjHAU7k9r0yHkpBSh+zPLaizsKF2S56+mrVhMMTKXh8bllHgU2jdXzzn4tBSuBzvLZiTYHGWi77eafTRAMUKfj8LZjHAU7k9r0yHkpBSh+zPLaizsKF2S56+mrVhMMTKXh8bllHgU2jdXzzn4tBSuBzvLZiTYHGWi77eafTRAMUKfj8LZjHAU7k9r0yHkpBSh+zPLaizsKF2S56+mrVhMMTKXh8bllHgU2jdXzzn4tBSuBzvLZiTYHGWi77eafTRAMUKfj8LZjHAU7k9r0yHkpBSh+zPLaizsKF2S56+mrVhMMTKXh8bllHgU2jdXzzn4tBQ==" type="audio/wav">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
