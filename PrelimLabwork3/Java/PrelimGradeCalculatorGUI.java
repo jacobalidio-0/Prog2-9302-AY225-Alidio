@@ -1,29 +1,12 @@
 import javax.swing.*;
-<<<<<<< HEAD
-=======
 import javax.swing.event.*;
 import javax.swing.text.*;
->>>>>>> e646995 (Submission)
 import java.awt.*;
 import java.awt.event.*;
 
 /**
  * Prelim Grade Calculator - Window-Based Application
  * Computes the required Prelim Exam score needed to pass or achieve excellent standing
-<<<<<<< HEAD
- * Based on the official grading breakdown:
- * - Prelim Grade = 30% Prelim Exam + 70% Class Standing
- * - Class Standing = 40% Attendance + 60% Lab Work Average
- */
-public class PrelimGradeCalculatorGUI extends JFrame {
-    
-    // Constants for grading weights
-    private static final double PRELIM_EXAM_WEIGHT = 0.30;
-    private static final double CLASS_STANDING_WEIGHT = 0.70;
-    private static final double ATTENDANCE_WEIGHT = 0.40;
-    private static final double LAB_WORK_WEIGHT = 0.60;
-    
-=======
  */
 public class PrelimGradeCalculatorGUI extends JFrame {
     // Constants for grading weights
@@ -36,36 +19,23 @@ public class PrelimGradeCalculatorGUI extends JFrame {
     private static final int MAX_ATTENDANCES = 5;
     private static final int FAILING_UNEXCUSED_ABSENCES = 4;
     
->>>>>>> e646995 (Submission)
     // Target grades
     private static final double PASSING_GRADE = 75.0;
     private static final double EXCELLENT_GRADE = 100.0;
     
     // GUI Components
-<<<<<<< HEAD
-    private JTextField attendanceField;
-=======
     private JTextField presentDaysField;
     private JTextField excusedAbsencesField;
->>>>>>> e646995 (Submission)
     private JTextField labWork1Field;
     private JTextField labWork2Field;
     private JTextField labWork3Field;
     private JTextArea resultArea;
-<<<<<<< HEAD
-    private JButton calculateButton;
-=======
->>>>>>> e646995 (Submission)
     private JButton clearButton;
     
     public PrelimGradeCalculatorGUI() {
         // Set up the main frame
         setTitle("Prelim Grade Calculator");
-<<<<<<< HEAD
-        setSize(600, 700);
-=======
         setSize(600, 800);
->>>>>>> e646995 (Submission)
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setResizable(false);
@@ -96,11 +66,7 @@ public class PrelimGradeCalculatorGUI extends JFrame {
         panel.setBackground(new Color(63, 81, 181));
         panel.setBorder(BorderFactory.createEmptyBorder(15, 10, 15, 10));
         
-<<<<<<< HEAD
-        JLabel titleLabel = new JLabel("📚 PRELIM GRADE CALCULATOR");
-=======
         JLabel titleLabel = new JLabel("PRELIM GRADE CALCULATOR");
->>>>>>> e646995 (Submission)
         titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
         titleLabel.setForeground(Color.WHITE);
         
@@ -133,17 +99,6 @@ public class PrelimGradeCalculatorGUI extends JFrame {
             BorderFactory.createEmptyBorder(10, 10, 10, 10)
         ));
         
-<<<<<<< HEAD
-        JLabel formulaTitle = new JLabel("📐 Grading Formula:");
-        formulaTitle.setFont(new Font("Arial", Font.BOLD, 14));
-        formulaTitle.setForeground(new Color(33, 150, 243));
-        
-        JLabel formula1 = new JLabel("Prelim Grade = 30% Prelim Exam + 70% Class Standing");
-        JLabel formula2 = new JLabel("Class Standing = 40% Attendance + 60% Lab Work Average");
-        
-        formula1.setFont(new Font("Monospaced", Font.PLAIN, 11));
-        formula2.setFont(new Font("Monospaced", Font.PLAIN, 11));
-=======
         JLabel formulaTitle = new JLabel("Grading Formula:");
         formulaTitle.setFont(new Font("Arial", Font.BOLD, 14));
         formulaTitle.setForeground(new Color(33, 150, 243));
@@ -158,17 +113,13 @@ public class PrelimGradeCalculatorGUI extends JFrame {
         formula3.setFont(new Font("Monospaced", Font.PLAIN, 11));
         formula4.setFont(new Font("Monospaced", Font.BOLD, 11));
         formula4.setForeground(new Color(211, 47, 47));
->>>>>>> e646995 (Submission)
         
         formulaPanel.add(formulaTitle);
         formulaPanel.add(Box.createVerticalStrut(5));
         formulaPanel.add(formula1);
         formulaPanel.add(formula2);
-<<<<<<< HEAD
-=======
         formulaPanel.add(formula3);
         formulaPanel.add(formula4);
->>>>>>> e646995 (Submission)
         
         // Input Fields Panel
         JPanel fieldsPanel = new JPanel(new GridBagLayout());
@@ -182,16 +133,6 @@ public class PrelimGradeCalculatorGUI extends JFrame {
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.insets = new Insets(8, 8, 8, 8);
         
-<<<<<<< HEAD
-        // Initialize text fields
-        attendanceField = new JTextField(15);
-        labWork1Field = new JTextField(15);
-        labWork2Field = new JTextField(15);
-        labWork3Field = new JTextField(15);
-        
-        // Style text fields
-        JTextField[] fields = {attendanceField, labWork1Field, labWork2Field, labWork3Field};
-=======
         // Initialize text fields with input filters
         presentDaysField = createRestrictedTextField(0, MAX_ATTENDANCES);
         excusedAbsencesField = createRestrictedTextField(0, MAX_ATTENDANCES);
@@ -201,25 +142,12 @@ public class PrelimGradeCalculatorGUI extends JFrame {
         
         // Style text fields
         JTextField[] fields = {presentDaysField, excusedAbsencesField, labWork1Field, labWork2Field, labWork3Field};
->>>>>>> e646995 (Submission)
         for (JTextField field : fields) {
             field.setFont(new Font("Arial", Font.PLAIN, 14));
             field.setBorder(BorderFactory.createCompoundBorder(
                 BorderFactory.createLineBorder(new Color(180, 180, 180), 1),
                 BorderFactory.createEmptyBorder(5, 8, 5, 8)
             ));
-<<<<<<< HEAD
-        }
-        
-        // Add labels and fields
-        addFieldRow(fieldsPanel, gbc, 0, "Number of Attendances (0-100):", attendanceField);
-        addFieldRow(fieldsPanel, gbc, 1, "Lab Work 1 Grade (0-100):", labWork1Field);
-        addFieldRow(fieldsPanel, gbc, 2, "Lab Work 2 Grade (0-100):", labWork2Field);
-        addFieldRow(fieldsPanel, gbc, 3, "Lab Work 3 Grade (0-100):", labWork3Field);
-        
-        // Results Area
-        resultArea = new JTextArea(12, 40);
-=======
             
             // Add document listener for auto-calculation
             field.getDocument().addDocumentListener(new DocumentListener() {
@@ -238,7 +166,6 @@ public class PrelimGradeCalculatorGUI extends JFrame {
         
         // Results Area
         resultArea = new JTextArea(14, 40);
->>>>>>> e646995 (Submission)
         resultArea.setEditable(false);
         resultArea.setFont(new Font("Monospaced", Font.PLAIN, 12));
         resultArea.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
@@ -265,8 +192,6 @@ public class PrelimGradeCalculatorGUI extends JFrame {
         return panel;
     }
     
-<<<<<<< HEAD
-=======
     // Create text field with input restriction
     private JTextField createRestrictedTextField(final int min, final int max) {
         JTextField field = new JTextField(15);
@@ -313,15 +238,11 @@ public class PrelimGradeCalculatorGUI extends JFrame {
         return field;
     }
     
->>>>>>> e646995 (Submission)
     private void addFieldRow(JPanel panel, GridBagConstraints gbc, int row, String labelText, JTextField field) {
         gbc.gridx = 0;
         gbc.gridy = row;
         gbc.weightx = 0.4;
-<<<<<<< HEAD
-=======
         
->>>>>>> e646995 (Submission)
         JLabel label = new JLabel(labelText);
         label.setFont(new Font("Arial", Font.PLAIN, 13));
         panel.add(label, gbc);
@@ -335,18 +256,6 @@ public class PrelimGradeCalculatorGUI extends JFrame {
         JPanel panel = new JPanel(new FlowLayout(FlowLayout.CENTER, 15, 10));
         panel.setBackground(new Color(240, 240, 250));
         
-<<<<<<< HEAD
-        calculateButton = new JButton("Calculate");
-        calculateButton.setFont(new Font("Arial", Font.BOLD, 14));
-        calculateButton.setPreferredSize(new Dimension(150, 40));
-        calculateButton.setBackground(new Color(76, 175, 80));
-        calculateButton.setForeground(Color.WHITE);
-        calculateButton.setFocusPainted(false);
-        calculateButton.setBorderPainted(false);
-        calculateButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        
-=======
->>>>>>> e646995 (Submission)
         clearButton = new JButton("Clear");
         clearButton.setFont(new Font("Arial", Font.BOLD, 14));
         clearButton.setPreferredSize(new Dimension(150, 40));
@@ -356,16 +265,6 @@ public class PrelimGradeCalculatorGUI extends JFrame {
         clearButton.setBorderPainted(false);
         clearButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
         
-<<<<<<< HEAD
-        // Add hover effects
-        addButtonHoverEffect(calculateButton, new Color(76, 175, 80), new Color(67, 160, 71));
-        addButtonHoverEffect(clearButton, new Color(158, 158, 158), new Color(130, 130, 130));
-        
-        calculateButton.addActionListener(e -> calculateGrades());
-        clearButton.addActionListener(e -> clearFields());
-        
-        panel.add(calculateButton);
-=======
         // Add hover effect
         clearButton.addMouseListener(new MouseAdapter() {
             public void mouseEntered(MouseEvent e) {
@@ -382,67 +281,11 @@ public class PrelimGradeCalculatorGUI extends JFrame {
             }
         });
         
->>>>>>> e646995 (Submission)
         panel.add(clearButton);
         
         return panel;
     }
     
-<<<<<<< HEAD
-    private void addButtonHoverEffect(JButton button, Color normal, Color hover) {
-        button.addMouseListener(new MouseAdapter() {
-            public void mouseEntered(MouseEvent e) {
-                button.setBackground(hover);
-            }
-            public void mouseExited(MouseEvent e) {
-                button.setBackground(normal);
-            }
-        });
-    }
-    
-    private void calculateGrades() {
-        try {
-            // Get and validate inputs
-            double attendances = Double.parseDouble(attendanceField.getText().trim());
-            double labWork1 = Double.parseDouble(labWork1Field.getText().trim());
-            double labWork2 = Double.parseDouble(labWork2Field.getText().trim());
-            double labWork3 = Double.parseDouble(labWork3Field.getText().trim());
-            
-            // Validate ranges
-            if (attendances < 0 || attendances > 100) {
-                showError("Attendances must be between 0 and 100");
-                return;
-            }
-            if (labWork1 < 0 || labWork1 > 100 || labWork2 < 0 || labWork2 > 100 || labWork3 < 0 || labWork3 > 100) {
-                showError("All lab work grades must be between 0 and 100");
-                return;
-            }
-            
-            // Compute values
-            double attendanceScore = attendances;
-            double labWorkAverage = (labWork1 + labWork2 + labWork3) / 3.0;
-            double classStanding = (ATTENDANCE_WEIGHT * attendanceScore) + (LAB_WORK_WEIGHT * labWorkAverage);
-            
-            // Calculate required Prelim Exam scores
-            double requiredForPassing = (PASSING_GRADE - (CLASS_STANDING_WEIGHT * classStanding)) / PRELIM_EXAM_WEIGHT;
-            double requiredForExcellent = (EXCELLENT_GRADE - (CLASS_STANDING_WEIGHT * classStanding)) / PRELIM_EXAM_WEIGHT;
-            
-            // Display results
-            displayResults(attendanceScore, labWork1, labWork2, labWork3, 
-                          labWorkAverage, classStanding, 
-                          requiredForPassing, requiredForExcellent);
-            
-        } catch (NumberFormatException e) {
-            showError("Please enter valid numeric values in all fields");
-        }
-    }
-    
-    private void displayResults(double attendanceScore, double labWork1, double labWork2, double labWork3,
-                               double labWorkAverage, double classStanding,
-                               double requiredForPassing, double requiredForExcellent) {
-        StringBuilder result = new StringBuilder();
-        
-=======
     private void calculateGrades() {
         try {
             // Check if all fields have values
@@ -542,32 +385,10 @@ public class PrelimGradeCalculatorGUI extends JFrame {
                                double labWorkAverage, double classStanding, 
                                double requiredForPassing, double requiredForExcellent) {
         StringBuilder result = new StringBuilder();
->>>>>>> e646995 (Submission)
         result.append("==============================================\n");
         result.append("           COMPUTATION RESULTS\n");
         result.append("==============================================\n\n");
         
-<<<<<<< HEAD
-        result.append(String.format("Attendance Score:        %.2f\n", attendanceScore));
-        result.append(String.format("Lab Work 1 Grade:        %.2f\n", labWork1));
-        result.append(String.format("Lab Work 2 Grade:        %.2f\n", labWork2));
-        result.append(String.format("Lab Work 3 Grade:        %.2f\n", labWork3));
-        result.append(String.format("Lab Work Average:        %.2f\n", labWorkAverage));
-        result.append(String.format("Class Standing:          %.2f\n", classStanding));
-        
-        result.append("\n==============================================\n");
-        result.append("      REQUIRED PRELIM EXAM SCORES\n");
-        result.append("==============================================\n\n");
-        
-        // For Passing Grade (75)
-        result.append(String.format("To PASS (75%%):          %.2f\n", requiredForPassing));
-        if (requiredForPassing > 100) {
-            result.append("Remark: It is impossible to pass.\n");
-            result.append("        You need a score greater than 100.\n");
-        } else if (requiredForPassing < 0) {
-            result.append("Remark: You have already passed!\n");
-            result.append("        Even with 0 on the Prelim Exam.\n");
-=======
         result.append(String.format("Physical Attendances: %d out of %d\n", presentDays, MAX_ATTENDANCES));
         if (excusedAbsences > 0) {
             result.append(String.format("Excused Absences: %d\n", excusedAbsences));
@@ -593,7 +414,6 @@ public class PrelimGradeCalculatorGUI extends JFrame {
             result.append("        impossible with your current class standing.\n");
         } else if (requiredForPassing <= 0) {
             result.append("Remark: You've already secured a passing grade!\n");
->>>>>>> e646995 (Submission)
         } else {
             result.append(String.format("Remark: You need %.2f or higher to pass.\n", requiredForPassing));
         }
@@ -601,22 +421,12 @@ public class PrelimGradeCalculatorGUI extends JFrame {
         result.append("\n");
         
         // For Excellent Grade (100)
-<<<<<<< HEAD
-        result.append(String.format("To get EXCELLENT (100%%): %.2f\n", requiredForExcellent));
-        if (requiredForExcellent > 100) {
-            result.append("Remark: It is impossible to achieve excellence.\n");
-            result.append("        You need a score greater than 100.\n");
-        } else if (requiredForExcellent < 0) {
-            result.append("Remark: You have already achieved excellence!\n");
-            result.append("        Even with 0 on the Prelim Exam.\n");
-=======
         result.append(String.format("For EXCELLENT (100): %.2f\n", requiredForExcellent));
         if (requiredForExcellent > 100) {
             result.append("Remark: This would require more than 100%%\n");
             result.append("        on the exam.\n");
         } else if (requiredForExcellent <= 0) {
             result.append("Remark: You've already secured an excellent grade!\n");
->>>>>>> e646995 (Submission)
         } else {
             result.append(String.format("Remark: You need %.2f for excellence.\n", requiredForExcellent));
         }
@@ -626,27 +436,14 @@ public class PrelimGradeCalculatorGUI extends JFrame {
         resultArea.setText(result.toString());
     }
     
-<<<<<<< HEAD
-    private void showError(String message) {
-        JOptionPane.showMessageDialog(this, message, "Input Error", JOptionPane.ERROR_MESSAGE);
-    }
-    
-    private void clearFields() {
-        attendanceField.setText("");
-=======
     private void clearFields() {
         presentDaysField.setText("");
         excusedAbsencesField.setText("");
->>>>>>> e646995 (Submission)
         labWork1Field.setText("");
         labWork2Field.setText("");
         labWork3Field.setText("");
         resultArea.setText("");
-<<<<<<< HEAD
-        attendanceField.requestFocus();
-=======
         presentDaysField.requestFocus();
->>>>>>> e646995 (Submission)
     }
     
     public static void main(String[] args) {
@@ -658,14 +455,6 @@ public class PrelimGradeCalculatorGUI extends JFrame {
         }
         
         // Create and display the GUI
-<<<<<<< HEAD
-        SwingUtilities.invokeLater(() -> {
-            PrelimGradeCalculatorGUI calculator = new PrelimGradeCalculatorGUI();
-            calculator.setVisible(true);
-        });
-    }
-}
-=======
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
                 PrelimGradeCalculatorGUI calculator = new PrelimGradeCalculatorGUI();
@@ -674,4 +463,3 @@ public class PrelimGradeCalculatorGUI extends JFrame {
         });
     }
 }
->>>>>>> e646995 (Submission)

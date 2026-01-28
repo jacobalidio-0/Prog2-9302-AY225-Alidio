@@ -3,11 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-    <title>Prelim Grade Calculator</title>
-=======
     <title>Programming 2 - Grade Calculator</title>
->>>>>>> e646995 (Submission)
     <style>
         * {
             margin: 0;
@@ -17,11 +13,7 @@
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-<<<<<<< HEAD
-            background: linear-gradient(135deg, #870811 0%, #764ba2 100%);
-=======
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
->>>>>>> e646995 (Submission)
             min-height: 100vh;
             padding: 20px;
             display: flex;
@@ -98,19 +90,6 @@
             letter-spacing: 0.5px;
         }
         
-<<<<<<< HEAD
-        .btn-calculate {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
-        
-        .btn-calculate:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
-        }
-        
-=======
->>>>>>> e646995 (Submission)
         .btn-reset {
             background: #f5f5f5;
             color: #666;
@@ -118,10 +97,7 @@
         
         .btn-reset:hover {
             background: #e0e0e0;
-<<<<<<< HEAD
-=======
             transform: translateY(-2px);
->>>>>>> e646995 (Submission)
         }
         
         #results {
@@ -230,8 +206,6 @@
             border-radius: 8px;
             border-left: 4px solid #c33;
             font-weight: 600;
-<<<<<<< HEAD
-=======
             animation: shake 0.5s ease-in-out;
         }
         
@@ -239,7 +213,6 @@
             0%, 100% { transform: translateX(0); }
             25% { transform: translateX(-10px); }
             75% { transform: translateX(10px); }
->>>>>>> e646995 (Submission)
         }
         
         .formula-info {
@@ -263,8 +236,6 @@
             margin: 5px 0;
         }
         
-<<<<<<< HEAD
-=======
         .auto-calc-notice {
             background: #fff3cd;
             color: #856404;
@@ -324,7 +295,6 @@
             color: #4a148c;
         }
         
->>>>>>> e646995 (Submission)
         @media (max-width: 600px) {
             .container {
                 padding: 20px;
@@ -346,79 +316,13 @@
 </head>
 <body>
     <div class="container">
-<<<<<<< HEAD
-        <h1>📚 Prelim Grade Calculator</h1>
-        <p class="subtitle">Calculate your required Prelim Exam score to pass or achieve excellence</p>
-=======
         <h1>📚 Programming 2</h1>
         <p class="subtitle">Prelims Term Grade Calculator</p>
->>>>>>> e646995 (Submission)
         
         <div class="formula-info">
             <h3>📐 Grading Formula</h3>
             <p><strong>Prelim Grade</strong> = 30% Prelim Exam + 70% Class Standing</p>
             <p><strong>Class Standing</strong> = 40% Attendance + 60% Lab Work Average</p>
-<<<<<<< HEAD
-            <p><strong>Lab Work Average</strong> = (Lab 1 + Lab 2 + Lab 3) ÷ 3</p>
-        </div>
-        
-        <form id="gradeForm" onsubmit="event.preventDefault(); calculatePrelimGrade();">
-            <div class="form-group">
-                <label for="attendances">Number of Attendances (0-100):</label>
-                <input 
-                    type="number" 
-                    id="attendances" 
-                    name="attendances" 
-                    min="0" 
-                    max="100" 
-                    step="1" 
-                    required
-                    placeholder="Enter attendance count">
-            </div>
-            
-            <div class="form-group">
-                <label for="labWork1">Lab Work 1 Grade (0-100):</label>
-                <input 
-                    type="number" 
-                    id="labWork1" 
-                    name="labWork1" 
-                    min="0" 
-                    max="100" 
-                    step="0.01" 
-                    required
-                    placeholder="Enter Lab Work 1 grade">
-            </div>
-            
-            <div class="form-group">
-                <label for="labWork2">Lab Work 2 Grade (0-100):</label>
-                <input 
-                    type="number" 
-                    id="labWork2" 
-                    name="labWork2" 
-                    min="0" 
-                    max="100" 
-                    step="0.01" 
-                    required
-                    placeholder="Enter Lab Work 2 grade">
-            </div>
-            
-            <div class="form-group">
-                <label for="labWork3">Lab Work 3 Grade (0-100):</label>
-                <input 
-                    type="number" 
-                    id="labWork3" 
-                    name="labWork3" 
-                    min="0" 
-                    max="100" 
-                    step="0.01" 
-                    required
-                    placeholder="Enter Lab Work 3 grade">
-            </div>
-            
-            <div class="button-group">
-                <button type="submit" class="btn-calculate">Calculate</button>
-                <button type="button" class="btn-reset" onclick="resetForm()">Reset</button>
-=======
             <p><strong>Total Attendance</strong> = Present Days + Excused Absences (max 5)</p>
             <p><strong>Attendance Score</strong> = (Total Attendance / 5) × 100</p>
             <p><strong>Lab Work Average</strong> = (Lab 1 + Lab 2 + Lab 3) ÷ 3</p>
@@ -496,17 +400,12 @@
             
             <div class="button-group">
                 <button type="button" class="btn-reset" onclick="resetForm()">Clear All</button>
->>>>>>> e646995 (Submission)
             </div>
         </form>
         
         <div id="results"></div>
     </div>
     
-<<<<<<< HEAD
-    <script src="calculator.js"></script>
-=======
     <script src="Calculator.js"></script>
->>>>>>> e646995 (Submission)
 </body>
 </html>
